@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/watchlistFragment">
+
+    <fragment
+        android:id="@+id/watchlistFragment"
+        android:name="com.example.hw4.ui.WatchlistFragment"
+        android:label="WatchlistFragment"
+        tools:layout="@layout/fragment_watchlist">
+        <action
+            android:id="@+id/watchlistToDetails"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ratingsFragment"
+        android:name="com.example.hw4.ui.RatingsFragment"
+        android:label="RatingsFragment"
+        tools:layout="@layout/fragment_ratings" >
+        <action
+            android:id="@+id/ratingsToDetails"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.hw4.ui.DetailsFragment"
+        android:label="DetailsFragment"
+        tools:layout="@layout/fragment_details">
+
+        <argument
+            android:name="movie"
+            app:argType="com.example.hw4.model.data.Movie" />
+        <action
+            android:id="@+id/action_detailsFragment_to_watchlistFragment"
+            app:destination="@id/watchlistFragment" />
+        <action
+            android:id="@+id/action_detailsFragment_to_ratingsFragment"
+            app:destination="@id/ratingsFragment" />
+
+    </fragment>
+
+
+</navigation>

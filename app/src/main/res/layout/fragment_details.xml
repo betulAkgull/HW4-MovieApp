@@ -1,0 +1,107 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:elevation="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="12dp"
+    app:contentPadding="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_movie_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Name"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <TextView
+            android:id="@+id/tv_movie_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Year"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/tv_movie_name"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+
+        <com.tistory.zladnrms.roundablelayout.RoundableLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:backgroundColor="@color/orange"
+            app:cornerLeftSide="50dp"
+            app:cornerRightSide="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:strokeLineColor="@color/orange"
+            app:strokeLineWidth="2dp">
+
+            <TextView
+                android:id="@+id/tv_movie_genre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Movie Genre"
+                android:textColor="@color/red"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+            </TextView>
+
+        </com.tistory.zladnrms.roundablelayout.RoundableLayout>
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="star"
+            app:layout_constraintBottom_toBottomOf="@id/tv_movie_rating"
+            app:layout_constraintEnd_toStartOf="@id/tv_movie_rating"
+            app:layout_constraintTop_toTopOf="@+id/tv_movie_rating"
+            app:srcCompat="@drawable/ic_star" />
+
+        <TextView
+            android:id="@+id/tv_movie_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Movie Rating"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_year">
+
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/btn_delete_movie"
+            android:layout_width="33dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/baseline_delete_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_movie_rating"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_movie_rating"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_rating"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
