@@ -8,13 +8,6 @@ Technologies Used:
 + Recycler View
 + Material Design
 
-<img src="[https://github.com/favicon.ico](https://github.com/betulAkgull/HW4-MovieApp/assets/76072632/71faa6ba-4256-47e5-8b19-2186b5812f08)" width="48">
-
-![You can a movie to your watchlist/ratings]()
-
-![Ratings](https://github.com/betulAkgull/HW4-MovieApp/assets/76072632/b117ec9d-d61b-46ee-adbc-6073a8f785d2)
-
-![Delete from lists](https://github.com/betulAkgull/HW4-MovieApp/assets/76072632/b9ba61ac-0974-43d7-8f09-8f5771e80592)
 
 
 
